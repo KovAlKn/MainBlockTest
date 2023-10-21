@@ -11,17 +11,10 @@ string[] InitArray(int n)
     return array;
 }
 
-// void PrintArray(string[] array)
-// {
-//     Console.Write("[");
-    
-//     for(int i=0; i<array.Length;i++)
-//         {
-//             Console.Write(array[i]+", ");
-//         }
-//     }
-//     Console.WriteLine(array[array.Length-1]+"]");
-// }
+void PrintArray(string[] array)
+{
+    Console.WriteLine($"[{String.Join(", ",array)}]");
+}
 
 string[] NewArray(string[] array, int len)
 {
@@ -53,8 +46,8 @@ Console.WriteLine("Введите длинну массива");
 int n = int.Parse(Console.ReadLine()??"0");
 string[] array = InitArray(n);
 Console.WriteLine("Исходный массив");
-Console.WriteLine($"[{String.Join(", ",array)}]");
+PrintArray(array);
 string[] newArray = NewArray(array,3);
 Console.WriteLine("Сформированный массив");
-Console.WriteLine($"[{String.Join(",",newArray)}]");
+PrintArray(newArray);
 
